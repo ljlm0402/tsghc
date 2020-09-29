@@ -1,6 +1,6 @@
 {
   "name": "tsghc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "TypeScript GitHub Clone CLI Tool",
   "author": "AGUMON <ljlm0402@gmail.com>",
   "license": "MIT",

@@ -14,8 +14,7 @@
     "tsghc": "bin/cli.js"
   },
   "scripts": {
-    "tsghc": "node bin/cli.js",
-    "publish": "npm publish --access public"
+    "tsghc": "node bin/cli.js"
   },
   "dependencies": {
     "arg": "^4.1.3",
@@ -34,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/ljlm0402/tsghc.git"
+    "url": "git+https://github.com/ljlm0402/tsghc.git"
   },
   "bugs": {
-    "url": "https://github.com/tsghc/tsghc-cli/issues"
+    "url": "https://github.com/ljlm0402/tsghc/issues"
   },
-  "homepage": "https://github.com/tsghc/tsghc-cli#readme"
+  "homepage": "https://github.com/ljlm0402/tsghc#readme"
 }

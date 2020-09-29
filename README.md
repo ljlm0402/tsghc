@@ -27,6 +27,8 @@ $ npm install -g tsghc
 $ tsghc
 ```
 
+<img src='https://github.com/ljlm0402/tsghc/raw/images/cli.gif' border='0' alt='cli' />
+
 ## 📩 Please tell us your Repositories
 
 Add it to the template folder file according to your repo's framework.

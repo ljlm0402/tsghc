@@ -1,0 +1,43 @@
+{
+  "name": "tsghc",
+  "version": "0.0.1",
+  "description": "TypeScript GitHub Clone CLI Tool",
+  "author": "AGUMON <ljlm0402@gmail.com>",
+  "license": "MIT",
+  "main": "bin/cli.js",
+  "keywords": [
+    "typescript",
+    "starter",
+    "cli"
+  ],
+  "bin": {
+    "tsghc": "bin/cli.js"
+  },
+  "scripts": {
+    "tsghc": "node bin/cli.js",
+    "publish": "npm publish --access public"
+  },
+  "dependencies": {
+    "arg": "^4.1.3",
+    "chalk": "^4.1.0",
+    "figlet": "^1.5.0",
+    "git-clone": "^0.1.0",
+    "inquirer": "^7.3.3"
+  },
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">= 10.13.0",
+    "npm": ">= 6.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/ljlm0402/tsghc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tsghc/tsghc-cli/issues"
+  },
+  "homepage": "https://github.com/tsghc/tsghc-cli#readme"
+}

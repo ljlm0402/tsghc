@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /*****************************************************************
- * The generated project is a @tsghc/cli.
+ * The generated project is a tsghc.
  * The person who developed it is AGUMON <ljlm0402@gmail.com>.
  * The date of development is September 29, 2020.
  *****************************************************************/
@@ -17,7 +17,7 @@ async function createProject() {
   try {
     console.log(
       chalk.blue.bgWhite(
-        figlet.textSync("TypeScript Starter", { horizontalLayout: "fitted", font: "Standard" })
+        figlet.textSync("TypeScript GitHub Cli", { horizontalLayout: "fitted", font: "Standard" })
       )
     );
 

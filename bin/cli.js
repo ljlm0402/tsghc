@@ -5,6 +5,7 @@
  * The person who developed it is AGUMON <ljlm0402@gmail.com>.
  * The date of development is September 29, 2020.
  *****************************************************************/
+'use strict';
 
 const inquirer = require("inquirer");
 const figlet = require("figlet");
@@ -41,7 +42,7 @@ function getProject() {
           type: "input",
           name: "name",
           message: "Please enter the desired project name.",
-          default: "starter-project",
+          default: "Selected Template Name",
         },
         {
           type: "list",
@@ -82,18 +83,13 @@ function cloneProject(project, template) {
   return new Promise(async (resolve, reject) => {
     try {
       const result = await inquirer.prompt(template);
+      const projectName = project.name === 'selected-template-name' ? result.template : project.name;
       const target = require(`../template/${project.framework.toLowerCase()}`).find(template => template.name === result.template);
-      await clone(target.url, `./${project.name}`);
+      clone(target.url, `./${projectName}`);
 
       resolve(target);
     } catch(error) {
-      if (error.isTtyError) {
-        console.log("Prompt couldn't be rendered in the current environment");
-      } else {
-        console.log("Something else when wrong");
-      }
-
-      reject(error)
+      reject(error);
     }
   });
 }

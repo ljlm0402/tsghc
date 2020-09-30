@@ -11,7 +11,7 @@
 
 ## 🌈 tsghc?
 
-tsghc is a CLI module that quickly fetches and uses Repositories composed of TypeScript.
+__tsghc__ is a CLI module that quickly fetches and uses Repositories composed of TypeScript.
 
 ## 🚀 Quick Start
 
@@ -29,7 +29,7 @@ $ tsghc
 
 <img src='https://github.com/ljlm0402/tsghc/raw/images/cli.gif' border='0' alt='cli' />
 
-## 📩 Please tell us your Repositories
+## 🤝 Please pull request from your repository.
 
 Add it to the template folder file according to your repo's framework.
 

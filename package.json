@@ -1,16 +1,23 @@
 {
   "name": "tsghc",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "TypeScript GitHub Clone CLI Tool",
   "author": "AGUMON <ljlm0402@gmail.com>",
   "license": "MIT",
   "main": "bin/cli.js",
   "keywords": [
     "typescript",
+    "boilerplate",
     "starter",
     "cli",
     "github",
     "clone",
+    "angular",
+    "react",
+    "vue",
+    "express",
+    "fastify",
+    "nest",
     "project"
   ],
   "bin": {

@@ -7,91 +7,130 @@
  *****************************************************************/
 'use strict';
 
-const inquirer = require("inquirer");
-const figlet = require("figlet");
-const chalk = require("chalk");
+const inquirer = require('inquirer');
 const path = require('path');
 const { readdir } = require('fs').promises;
-const clone = require("git-clone");
+const clone = require('git-clone');
+const log = require('./log.js');
 
-async function createProject() {
+const createProject = async () => {
   try {
-    console.log(
-      chalk.blue.bgWhite(
-        figlet.textSync("TypeScript GitHub Cli", { horizontalLayout: "fitted", font: "Standard" })
-      )
-    );
+    log.cli();
+    let decide, info;
+    const { project } = await inputProjectName();
+  
+    do {
+      const { framework } = await selectedFramework();
+      const { template } = await selectedTemplate(framework);
+      info = await getTemplateInfo(framework, template);
+      decide = await decideTemplate(template);
+    } while (!decide)
 
-    const project = await getProject();
-    const template = await getTemplate(project);
-    const target = await cloneProject(project, template);
-
-    console.log(chalk.green('Your Starter Template created.'));
-    console.info(chalk.yellow(`Template Info \n name: ${target.name} \n author: ${target.author} \n github: ${target.url}`));
+    await cloneProject(project, info);
   } catch(error) {
-    console.error(chalk.red(error));
+    console.error(error);
   }
 }
 
-function getProject() {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const contents = await readdir(path.join(__dirname, '../template'), { withFileTypes: true });
-      const result = await inquirer.prompt([
-        {
-          type: "input",
-          name: "name",
-          message: "Please enter the desired project name.",
-          default: "Selected Template Name",
-        },
-        {
-          type: "list",
-          name: "framework",
-          message: "Please select the desired project Freamework.",
-          choices: contents.filter(p => !p.isDirectory()).map(p => (p.name).replace('.js', '').replace(/\b[a-z]/, letter => letter.toUpperCase()))
-        }
-      ]);
-  
-      result.name = result.name.replace(/\s+/g, "-").toLowerCase();
-      resolve(result);
-    } catch(error) {
+const inputProjectName = () => {
+  return new Promise((resolve, reject) => {
+    inquirer.prompt([
+      {
+        type: 'input',
+        name: 'project',
+        message: 'Please enter the desired project name.',
+        default: 'Selected Template Name'
+      }
+    ])
+    .then(result => {
+      resolve({ 
+        project: result.project.replace(/\s+/g, '-').toLowerCase() 
+      });
+    })
+    .catch(error => {
       reject(error);
-    }
+    });
   });
 };
 
-function getTemplate(project) {
+const selectedFramework = () => {
+  return new Promise(async (resolve, reject) => {
+    let framework = await readdir(path.join(__dirname, '../template'), { withFileTypes: true });
+    framework = framework.filter(p => !p.isDirectory()).map(p => (p.name).replace('.js', '').replace(/\b[a-z]/, letter => letter.toUpperCase()));
+
+    inquirer.prompt([
+      {
+        type: 'list',
+        name: 'framework',
+        message: 'Please select the desired project Freamework.',
+        choices: framework
+      }
+    ])
+    .then(result => {
+      resolve(result);
+    })
+    .catch(error => {
+      reject(error);
+    });
+  });
+};
+
+const selectedTemplate = (framework) => {
+  return new Promise((resolve, reject) => {
+    const template = require(`../template/${framework.toLowerCase()}`).map(template => template.title);
+
+    inquirer.prompt([
+      {
+        type: 'list',
+        name: 'template',
+        message: `The Freamework you choose is ${framework}. Select the template you want.`,
+        choices: template
+      }
+    ])
+    .then(result => {
+      resolve(result);
+    })
+    .catch(error => {
+      reject(error);
+    });
+  });
+};
+
+const getTemplateInfo = (framework, template) => {
+  const data = require(`../template/${framework.toLowerCase()}`).find(t => t.title === template);
+  log.info(data);
+  return data;
+}
+
+const decideTemplate = (template) => {
+  return new Promise((resolve, reject) => {
+    inquirer.prompt([
+      {
+        type: 'confirm',
+        name: 'decide',
+        message: `Would you like to decide with the ${template} template ?`,
+      }
+    ])
+    .then(result => {
+      resolve(result.decide);
+    })
+    .catch(error => {
+      reject(error);
+    });
+  });
+};
+
+const cloneProject = (project, template) => {
   return new Promise((resolve, reject) => {
     try {
-      const frameworkPrompt = [
-        {
-          type: "list",
-          name: "template",
-          message: `The Freamework you choose is ${project.framework}. Select the template you want.`,
-          choices: require(`../template/${project.framework.toLowerCase()}`).map(template => template.name)
-        }
-      ];
-
-      resolve(frameworkPrompt);
+      const projectName = project === 'selected-template-name' ? template.title : project;
+      clone(template.url, `./${projectName}`);
+      log.interactive();
+      resolve();
     } catch(error) {
       reject(error);
     }
   });
 };
-
-function cloneProject(project, template) {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const result = await inquirer.prompt(template);
-      const projectName = project.name === 'selected-template-name' ? result.template : project.name;
-      const target = require(`../template/${project.framework.toLowerCase()}`).find(template => template.name === result.template);
-      clone(target.url, `./${projectName}`);
-
-      resolve(target);
-    } catch(error) {
-      reject(error);
-    }
-  });
-}
 
 createProject();

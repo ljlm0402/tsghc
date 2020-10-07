@@ -2,38 +2,45 @@
 
 module.exports = [
     {
-        name: 'ts-express-boilerplate',
         url: 'https://github.com/d4rkstar/ts-express-boilerplate.git',
-        author: 'd4rkstar'
+        title: 'ts-express-boilerplate',
+        author: 'd4rkstar',
+        description: 'Typescript Express Boilerplate'
     },
     {
-        name: 'node-express-mysql-typescript-api-boilerplate',
         url: 'https://github.com/a7urag/node-express-mysql-typescript-api-boilerplate.git',
-        author: 'a7urag'
+        title: 'node-express-mysql-typescript-api-boilerplate',
+        author: 'a7urag',
+        description: 'Boilerplate for node express mysql typescript api project'
     },
     {
-        name: 'express-typescript-starter',
         url: 'https://github.com/rjmacarthy/express-typescript-starter.git',
-        author: 'rjmacarthy'
+        title: 'express-typescript-starter',
+        author: 'rjmacarthy',
+        description: 'An Express.js project implemented using Typescript with strongly typed objects'
     },
     {
-        name: 'docker-express-typescript-boilerplate',
         url: 'https://github.com/sidhantpanda/docker-express-typescript-boilerplate.git',
-        author: 'sidhantpanda'
+        title: 'docker-express-typescript-boilerplate',
+        author: 'sidhantpanda',
+        description: 'A dockerized TypeScript-Express App boilerplate with MongoDB and Github Actions'
     },
     {
-        name: 'nodejs-boilerplate',
         url: 'https://github.com/satishbabariya/nodejs-boilerplate.git',
-        author: 'satishbabariya'
+        title: 'nodejs-boilerplate',
+        author: 'satishbabariya',
+        description: 'Clean Architecture for node.js projects (Typescript + Express + TypeORM + Typedi)'
     },
     {
-        name: 'ts-backend-template',
         url: 'https://github.com/changhoi/ts-backend-template.git',
-        author: 'changhoi'
+        title: 'ts-backend-template',
+        author: 'changhoi',
+        description: '타입스크립트 백앤드 보일러플레이트'
     },
     {
-        name: 'api_server_boilerplate',
         url: 'https://github.com/Q00/api_server_boilerplate.git',
-        author: 'Q00'
+        title: 'api_server_boilerplate',
+        author: 'Q00',
+        description: 'typescript express board boilerplate using routing controller'
     }
 ];

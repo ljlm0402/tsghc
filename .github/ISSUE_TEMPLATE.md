@@ -1,25 +1,21 @@
-# 💙 TypeScript Github CLI 
-
-## Please briefly explain your Repositories.
-
-```
-
-```
+# 💙 TypeScript Github Clone CLI 
 
 ## Please write according to the format.
 <!-- Example
 {
-    name: '<repo_name>',
     url: '<repo_url>',
-    author: '<your_name>'
+    name: '<repo_name>',
+    author: '<your_name>',
+    description: '<repo_desc>'
 }
 -->
 
 ```sh
 {
-    name: '',
     url: '',
-    author: ''
+    name: '',
+    author: '',
+    description: ''
 }
 ```
 

@@ -2,8 +2,9 @@
 
 module.exports = [
     {
-        name: 'universal-starter',
         url: 'https://github.com/angular/universal-starter.git',
-        author: 'vikerman'
+        title: 'universal-starter',
+        author: 'vikerman',
+        description: 'Angular Universal starter kit by @AngularClass'
     }
 ];

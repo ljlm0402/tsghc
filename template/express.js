@@ -42,5 +42,11 @@ module.exports = [
         title: 'api_server_boilerplate',
         author: 'Q00',
         description: 'typescript express board boilerplate using routing controller'
+    },
+    {
+        url: 'https://github.com/kkrishnakv/express-ts-starter.git',
+        name: 'express-ts-starter',
+        author: 'kkrishnakv',
+        description: 'Express JS Starter pack using Typescript and configuration based JSON for different environment.'
     }
 ];

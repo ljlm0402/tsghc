@@ -12,5 +12,11 @@ module.exports = [
         name: 'type-react-saga-styled-18.',
         author: 'sweetmilkys',
         description: 'React + Redux + Saga + StyledComponent + i18next elementary project template'
+    },
+    {
+        url: 'https://github.com/dl0312/react-typescript-boilerplate',
+        name: 'react-typescript-boilerplate',
+        author: 'dl0312',
+        description: '👶 타입스크립트와 함께 리액트 앱을 만들기 위한 최고의 방법!'
     }
 ];

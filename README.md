@@ -34,7 +34,8 @@ $ tsghc
 ![](https://img.shields.io/badge/-Next-000000?style=for-the-badge&logo=next.js&logoColor=fff)
 ![](https://img.shields.io/badge/-Vue-4FC08D?style=for-the-badge&logo=vue.js&logoColor=fff)
 ![](https://img.shields.io/badge/-Nuxt-00C58E?style=for-the-badge&logo=nuxt.js&logoColor=fff)
-![](https://img.shields.io/badge/-Express-F8F8F5?style=for-the-badge)
+![](https://img.shields.io/badge/-Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=fff)
+![](https://img.shields.io/badge/-Express_&&_Koa-F8F8F5?style=for-the-badge)
 ![](https://img.shields.io/badge/-Nest-E0234E?style=for-the-badge&logo=nestjs&logoColor=fff)
 ![](https://img.shields.io/badge/-Fastify-000000?style=for-the-badge&logo=fastify&logoColor=fff)
 

@@ -42,26 +42,28 @@ $ tsghc
 
 Add it to the template folder file according to your repo's framework. [here](https://github.com/ljlm0402/tsghc/issues/new)
 
-```js
+```md
 {
-    url: '<repo_url>',
-    name: '<repo_name>',
-    author: '<your_name>',
-    description: '<repo_desc>'
+url: '<repo_url>',
+name: '<repo_name>',
+author: '<your_name>',
+description: '<repo_desc>'
 }
+
+link : '<repo_link>'
 ```
 
 ## 📬 Recommended Commit Message
 
-| When               | Commit Message              |
-| :----------------- | :-------------------------- |
-| Add function       | feat: ⚡️ Add function      |
-| Fix bug            | fix: 🐞 Fix bug             |
-| Refactoring        | refactor: 🛠 Refactoring     |
-| Add package        | package: 📦 Add package     |
-| Fix readme         | docs: 📚 Fix readme         |
-| Improvements style | style: 👁 Improvements style |
-| New Releases       | releases: 🎉 Releases       |
+| Template      | Commit Message   |
+| :------------ | :--------------- |
+| Angular       | ❤️ Angular       |
+| React & Next  | 💙 React & Next  |
+| Vue & Nuxt    | 💚 Vue & Nuxt    |
+| Svelte        | 🧡 Svelte        |
+| Express & Koa | 🤍 Express & Koa |
+| Next          | 💜 Next          |
+| Fastify       | 🖤 Fastify       |
 
 ## 💳 License
 

@@ -18,5 +18,11 @@ module.exports = [
         name: 'react-typescript-boilerplate',
         author: 'dl0312',
         description: '👶 타입스크립트와 함께 리액트 앱을 만들기 위한 최고의 방법!'
+    },
+    {
+        url: 'https://github.com/SoYoung210/cra-template-soso',
+        name: 'cra-template-soso',
+        author: 'SoYoung210',
+        description: '🥟 cra template'
     }
 ];

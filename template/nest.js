@@ -12,5 +12,11 @@ module.exports = [
         title: 'nestjs-todo-api-demo',
         author: 'changhoi',
         description: 'NestJS를 사용해서 국민 데모앱 TODO API를 만드는 데모'
+    },
+    {
+        url: 'https://github.com/JaeWangL/nest-boilerplate',
+        name: 'nest-boilerplate',
+        author: 'JaeWangL',
+        description: 'A boilerplate project for Nest.JS'
     }
 ];

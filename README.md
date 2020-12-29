@@ -63,7 +63,7 @@ link : '<repo_link>'
 | Vue & Nuxt    | 💚 Vue & Nuxt    |
 | Svelte        | 🧡 Svelte        |
 | Express & Koa | 🤍 Express & Koa |
-| Next          | 💜 Next          |
+| Nest          | 💜 Nest          |
 | Fastify       | 🖤 Fastify       |
 
 ## 💳 License

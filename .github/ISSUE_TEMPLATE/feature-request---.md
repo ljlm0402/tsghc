@@ -1,4 +1,10 @@
-## Please write according to the format.
+---
+name: "New Template(새로운 템플릿) \U0001F4A1"
+about: "Propose a new project."
+title: ""
+labels: "Feature"
+assignees: ""
+---
 
 <!-- Example
 {

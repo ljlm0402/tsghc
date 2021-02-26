@@ -18,5 +18,11 @@ module.exports = [
         name: 'nest-boilerplate',
         author: 'JaeWangL',
         description: 'A boilerplate project for Nest.JS'
+    },
+    {
+        url: 'https://github.com/msanvarov/nest-rest-typeorm-boilerplate.git',
+        name: 'nest-rest-typeorm-boilerplate',
+        author: 'msanvarov',
+        description: '🍱 backend with nest (typescript), typeorm, and authentication'
     }
 ];

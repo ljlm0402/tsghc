@@ -3,44 +3,47 @@
  * The person who developed it is AGUMON <ljlm0402@gmail.com>.
  * The date of development is September 29, 2020.
  *****************************************************************/
-'use strict';
+"use strict";
 
-const figlet = require('figlet');
-const chalk = require('chalk');
-const { Signale } = require('signale');
+const figlet = require("figlet");
+const chalk = require("chalk");
+const { Signale } = require("signale");
 
 exports.cli = () => {
   console.log(
-      chalk.blue.bgWhite(
-        figlet.textSync('TypeScript GitHub Clone', { horizontalLayout: 'fitted', font: 'Standard' })
-      )
-    );
+    chalk.blue.bgWhite(
+      figlet.textSync("TypeScript GitHub Clone", {
+        horizontalLayout: "fitted",
+        font: "Standard",
+      })
+    )
+  );
 };
 
 exports.info = (data) => {
   const option = {
     types: {
       url: {
-        badge: '❤️',
-        color: 'red',
-        label: 'URL'
+        badge: "❤️",
+        color: "red",
+        label: "URL",
       },
       title: {
-        badge: '💛',
-        color: 'yellow',
-        label: 'TITLE'
+        badge: "💛",
+        color: "yellow",
+        label: "TITLE",
       },
       author: {
-        badge: '💚',
-        color: 'green',
-        label: 'AUTHOR'
+        badge: "💚",
+        color: "green",
+        label: "AUTHOR",
       },
       desc: {
-        badge: '💙',
-        color: 'blue',
-        label: 'DESC'
-      }
-    }
+        badge: "💙",
+        color: "blue",
+        label: "DESC",
+      },
+    },
   };
 
   const template = new Signale(option);
@@ -52,12 +55,12 @@ exports.info = (data) => {
 
 exports.interactive = () => {
   const interactive = new Signale({ interactive: true });
-  interactive.wait('[%d / 3] - Get GitHub Repositories Info.', 1);
+  interactive.wait("[%d / 3] - Get GitHub Repositories Info.", 1);
 
+  setTimeout(() => {
+    interactive.start("[%d / 3] - Start GitHub Repositories Clone", 2);
     setTimeout(() => {
-      interactive.start('[%d / 3] - Start GitHub Repositories Clone', 2);
-      setTimeout(() => {
-        interactive.complete('[%d / 3] - Complete GitHub Repositories Clone', 3);
-      }, 1000);
+      interactive.complete("[%d / 3] - Complete GitHub Repositories Clone", 3);
     }, 1000);
+  }, 1000);
 };

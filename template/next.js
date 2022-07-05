@@ -27,4 +27,10 @@ module.exports = [
     description:
       "With this boilerplate start your project well configured with Eslint, prettier, Husky, babel, next-config and even the use of PLOP for you to automatically create your component structure, with style, storiebook and test files.",
   },
+  {
+    url: "https://github.com/JagTheFriend/Nextjs-Firebase-Auth-Template",
+    name: "next-firebase-auth",
+    author: "JagTheFriend",
+    description: "This template uses firebase (google more specifically) for authentication with along TypeScript"
+  }
 ];
